@@ -105,11 +105,11 @@
         font-family: "Formular-regular", sans-serif;
         font-size: var(--fs-text-xs);
         line-height: var(--lh-text-xs);
-        @media (width: clamp(759px, 50%, 1024px)) {
+        @media (max-w) {
           font-family: "Formular-ligth", sans-serif;
         }
       }
-      @media (max-width: 758px) {
+      @media (min-width: 759px) and (max-width: 1024px) {
         justify-content: center;
       }
     }
