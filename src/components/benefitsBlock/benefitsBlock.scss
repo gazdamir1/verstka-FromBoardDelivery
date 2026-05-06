@@ -1,0 +1,79 @@
+.benefitsBlockMain {
+  display: flex;
+  flex-direction: column;
+}
+
+.headerText {
+  font-size: var(--fs-text-3xl);
+  line-height: var(--lh-text-3xl);
+  text-align: center;
+  font-family: "Formular-Black", sans-serif;
+  margin-bottom: 24px;
+}
+
+.benefitsBlock {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(12, 1fr);
+  @media (max-width: 1536px) {
+    grid-template-columns: repeat(10, 1fr);
+  }
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(8, 1fr);
+  }
+  @media (max-width: 758px) {
+    grid-template-columns: repeat(10, 1fr);
+  }
+  .cell {
+    grid-column: 4 span;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+    gap: 12px;
+    @media (max-width: 1536px) {
+      grid-column: 5 span;
+    }
+    @media (max-width: 1024px) {
+      grid-column: 4 span;
+      padding: 0;
+    }
+    @media (max-width: 768px) {
+      grid-column: 3/6 span;
+      padding: 0;
+    }
+
+    .cellImage {
+      width: 126px;
+      height: 126px;
+      @media (max-width: 1024px) {
+        width: 109px;
+        height: 109px;
+      }
+    }
+    .cellText {
+      margin-left: 12px;
+      margin-right: 24px;
+      width: 300px;
+      @media (max-width: 1024px) {
+        margin: 0;
+      }
+
+      .cellTextHeader {
+        font-family: "Formular-Black", sans-serif;
+        font-size: var(--fs-text-2xl);
+        line-height: var(--lh-text-2xl);
+        margin-bottom: 12px;
+        @media (max-width: 1024px) {
+          font-size: var(--fs-text-xl);
+          line-height: var(--lh-text-xl);
+        }
+      }
+      .cellTextBody {
+        font-family: "Formular-Regular", sans-serif;
+        font-size: var(--fs-text-sm);
+        line-height: var(--lh-text-sm);
+      }
+    }
+  }
+}

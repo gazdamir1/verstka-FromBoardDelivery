@@ -1,0 +1,21 @@
+{
+  "name": "verstka-fromboarddelivery",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "sass-embedded": "^1.99.0",
+    "vite": "^8.0.4",
+    "vite-plugin-html": "^3.2.2",
+    "vite-plugin-include-html": "^1.0.0"
+  },
+  "dependencies": {
+    "@kingkongdevs/vite-plugin-html-includes": "^1.0.5",
+    "scss": "^0.2.4"
+  }
+}

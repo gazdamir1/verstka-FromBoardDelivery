@@ -1,0 +1,59 @@
+<div class="calculatorBlockMain">
+    <script type="module" src="/src/components/calculatorBlock/calculatorBlock.js"></script>
+    <div class="calculatorBlock container">
+        <div class="infoSide">
+            <div class="infoSideText"><p class="headerText">Без проблемная доставка купленных вещей из США, Европы и Азии в Россию</p>
+            <p class="bodyText">Сэкономьте на покупках и наслаждайтесь мировыми брендами — наш сервис позволяет вам легко и удобно заказывать товары со всего мира и получать их в России</p>
+        </div>
+            <img src="../../src/assets/hero.png" alt="infoSideImage" class="infoImg">
+        </div>
+        <div class="calculatorSideMain">
+            <div class="calculatorSide">
+                <div class="calculatorText">
+                    <h1 class="headerTextCalc" text-4xl>Калькулятор доставки</h1>
+                    <p class="bodyText">Посчитайте, сколько будет стоить перевозка покупки из зарубежа</p>
+                </div>
+                <form class="calculatorForm">
+                    <div class="form-group2">
+                        <input class="calculatorFormInput2" id="name" placeholder="Имя">
+                        <div class="error-message" id="nameError"></div>
+                    </div>
+                    <div class="form-group">
+                        <input class="calculatorFormInput" id="email" placeholder="Почта" type="email">
+                        <div class="error-message" id="emailError"></div>
+                    </div>
+                    <div class="form-group">
+                        <input class="calculatorFormInput" id="phone" placeholder="Телефон" type="tel">
+                        <div class="error-message" id="phoneError"></div>
+                    </div>
+                    <div class="form-group">
+                        <input class="calculatorFormInput" id="area" placeholder="Общая площадь, м²" type="number">
+                        <div class="error-message" id="areaError"></div>
+                    </div>
+                    <div class="form-group">
+                        <input class="calculatorFormInput" id="weight" placeholder="Вес, кг" type="number">
+                        <div class="error-message" id="weightError"></div>
+                    </div>
+                    <div class="form-group">
+                        <input class="calculatorFormInput" id="country" placeholder="Страна покупки">
+                        <div class="error-message" id="countryError"></div>
+                    </div>
+                    <div class="form-group">
+                        <input class="calculatorFormInput" id="purchaseCity" placeholder="Город покупки">
+                        <div class="error-message" id="purchaseCityError"></div>
+                    </div>
+                    <div class="form-group">
+                        <input class="calculatorFormInput" id="region" placeholder="Область доставки">
+                        <div class="error-message" id="regionError"></div>
+                    </div>
+                    <div class="form-group">
+                        <input class="calculatorFormInput" id="deliveryCity" placeholder="Город доставки">
+                        <div class="error-message" id="deliveryCityError"></div>
+                    </div>
+
+                    <button class="calculatorFormButton" type="button" id="calculatorSubmitBtn">Заказать расчёт</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

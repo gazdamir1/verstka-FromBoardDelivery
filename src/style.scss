@@ -1,0 +1,127 @@
+@use "./components/header/header.scss";
+@use "./components/calculatorBlock/calculatorBlock.scss";
+@use "./components/benefitsBlock/benefitsBlock.scss";
+@use "./components/garanty/garanty.scss";
+@use "./components/reviewsBlock/reviewsBlock.scss";
+@use "./components/contactBlock/contactBlock.scss";
+@use "./components/footer/footer.scss";
+@use "./assets/fonts/fonts.scss";
+@use "./normalize.scss";
+
+:root {
+  --content-width: 1536px;
+  --container-offset: 15px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+  --main-color: #111827;
+  --purple-color: #a78bfa;
+  --purple-dark-color: #8b5cf6;
+  --light-color: #f9fafb;
+  --gray-color: #e5e7eb;
+
+  /* Palette */
+  --gray-50: #f9fafb;
+  --gray-200: #e5e7eb;
+  --gray-400: #9ca3af;
+  --gray-600: #4b5563;
+  --gray-900: #111827;
+  --purple-100: #ede9fe;
+  --purple-300: #c4b5fd;
+  --purple-400: #a78bfa;
+  --purple-500: #8b5cf6;
+  --purple-600: #7c3aed;
+  --purple-700: #6d28d9;
+  --purple-900: #4c1d95;
+  --indigo-300: #a5b4fc;
+
+  /* Semantic */
+  --bg: var(--gray-200);
+  --bg-inverted: var(--gray-900);
+  --component-bg: var(--gray-50);
+  --text: var(--gray-900);
+  --text-inverted: var(--gray-50);
+  --text-disclaimer: var(--gray-600);
+  --border: var(--gray-900);
+  --border-focus: var(--purple-500);
+  --accent: var(--purple-500);
+  --accent-hover: var(--purple-400);
+  --accent-focus: var(--purple-500);
+  --placeholder: var(--gray-400);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  font-family: "Formular-Regular", sans-serif;
+  background-color: var(--gray-color);
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
+  @media (max-width: 1536px) {
+    gap: 48px;
+  }
+}
+
+h1 {
+  font-family: "Formular-Black", sans-serif;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1536px;
+}
+
+@media (max-width: 1536px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (max-width: 758px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+button {
+  transition:
+    border-color 0.3s ease-in-out,
+    background-color 0.3s ease-in-out;
+
+  font-family: "Formular-Bold", sans-serif;
+  cursor: pointer;
+  color: var(--light-color);
+  background-color: var(--purple-dark-color);
+  border: 2px solid var(--purple-dark-color);
+
+  &:hover {
+    background-color: var(--accent-hover);
+  }
+
+  &:focus {
+    outline: none;
+    background-color: var(--accent-hover);
+    border-color: var(--accent-focus);
+  }
+}
+
+textarea {
+  resize: none;
+}
+
+.navButton {
+  &:focus {
+    color: var(--accent) !important;
+    border-color: var(--accent) !important;
+    outline: none;
+  }
+}

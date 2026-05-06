@@ -1,0 +1,294 @@
+.headerContainer {
+  background-color: var(--light-color);
+  padding: 24px 0;
+  z-index: 1000;
+
+  @media (max-width: 758px) {
+    padding: 12px 0;
+  }
+}
+.headerContainerMain {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 24px;
+  @media (max-width: 1024px) {
+    padding-bottom: 12px;
+  }
+  @media (max-width: 758px) {
+    padding-bottom: 0;
+  }
+
+  .headerSection1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .logo {
+      width: 50px;
+      height: 74px;
+    }
+    .logoText {
+      font-size: var(--fs-text-2xl);
+      line-height: var(--lh-text-2xl);
+      letter-spacing: normal;
+      vertical-align: bottom;
+      font-family: "Formular-Black", sans-serif;
+      @media (max-width: 758px) {
+        font-size: var(--fs-text-lg);
+        line-height: var(--lh-text-lg);
+      }
+    }
+  }
+
+  .headerSection2 {
+    height: 76px;
+    display: flex;
+    .infoBox {
+      font-size: var(--fs-text-base);
+      line-height: var(--lh-text-base);
+      padding-right: 12px;
+      border-right: 1px solid var(--purple-color);
+      @media (max-width: 1024px) {
+        display: none;
+      }
+
+      .infoBoxText {
+        margin: 0;
+        text-align: end;
+      }
+    }
+
+    .contactBox {
+      padding-left: 15px;
+      display: flex;
+      justify-content: space-around;
+      flex-direction: column;
+      .contanctBoxText {
+        display: flex;
+        justify-content: end;
+        font-family: "Formular-Black", sans-serif;
+        font-size: var(--fs-text-4xl);
+        line-height: var(--lh-text-4xl);
+        margin: 0;
+        @media (max-width: 1536px) {
+          font-size: var(--fs-text-3xl);
+          line-height: var(--lh-text-3xl);
+        }
+        @media (max-width: 1024px) {
+          font-size: var(--fs-text-2xl);
+          line-height: var(--lh-text-2xl);
+        }
+        @media (max-width: 758px) {
+          font-size: var(--fs-text-xl);
+          line-height: var(--lh-text-xl);
+        }
+      }
+      .contanctBoxTextTel {
+        font-family: "Formular-Light", sans-serif;
+        font-size: var(--fs-text-2xl);
+        line-height: var(--lh-text-2xl);
+        margin: 0;
+        text-align: end;
+        @media (max-width: 1536px) {
+          font-size: var(--fs-text-xl);
+          line-height: var(--lh-text-xl);
+        }
+        @media (max-width: 1024px) {
+          font-size: var(--fs-text-base);
+          line-height: var(--lh-text-base);
+        }
+        @media (max-width: 758px) {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.navBarContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (max-width: 1024px) {
+    border-block: 2px solid var(--purple-color);
+    padding-block: 10px;
+  }
+
+  .navButtons {
+    font-family: "Formular-Bold", sans-serif;
+    display: flex;
+    gap: 24px;
+    font-size: var(--fs-text-base);
+    line-height: var(--lh-text-base);
+    .navButton {
+      border-bottom: 2px dashed transparent;
+      color: var(--main-color);
+      transition:
+        border-color 0.3s ease-in-out,
+        color 0.3s ease-in-out;
+      text-decoration: none;
+      &:hover {
+        color: var(--purple-dark-color);
+      }
+    }
+  }
+  .styledButton {
+    padding: 10px 28px;
+    border-radius: 4px;
+  }
+}
+
+.infoBoxMini {
+  display: none;
+}
+
+@media (min-width: 759px) and (max-width: 1024px) {
+  .infoBoxMini {
+    margin-top: 12px !important;
+    display: flex;
+    padding: 4px 32px;
+    text-align: center;
+    align-items: center;
+    gap: 8px;
+    font-size: var(--fs-text-sm);
+    line-height: var(--lh-text-sm);
+    font-family: "Formular-regular", sans-serif;
+    .infoBoxText {
+      flex: 1;
+    }
+  }
+}
+
+.descriptionPart {
+  font-size: var(--fs-text-xs);
+  line-height: var(--lh-text-xs);
+}
+
+.burger {
+  display: none;
+  @media (max-width: 758px) {
+    display: block;
+  }
+}
+
+@media (max-width: 758px) {
+  .bottom {
+    position: absolute; /* или fixed */
+
+    transform: translateY(-250px);
+    transition: transform 0.3s all;
+    background-color: var(--light-color);
+    padding-inline: 63px;
+    margin: 0 !important;
+    left: 0;
+    right: 0;
+    max-width: 100% !important;
+    pointer-events: none;
+    border-radius: 0 0 16px 16px;
+
+    .navBarContainer {
+      margin-top: 12px;
+      top: 100px;
+    }
+    .infoBoxMini {
+      display: flex;
+      top: 156px;
+      margin-top: 12px !important;
+      padding: 4px 32px;
+      padding-bottom: 24px;
+      text-align: center;
+      align-items: center;
+      gap: 8px;
+      font-size: var(--fs-text-sm);
+      line-height: var(--lh-text-sm);
+      font-family: "Formular-regular", sans-serif;
+      .infoBoxText {
+        flex: 1;
+      }
+    }
+  }
+  .bottom.active {
+    transform: none;
+    pointer-events: auto;
+  }
+
+  .contactBox {
+    flex-direction: row !important;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .burger {
+    border: none;
+    background-color: var(--light-color);
+    position: relative;
+    width: 24px;
+    height: 16px;
+    --burger-line-height: 4px;
+    color: var(--purple-color);
+    --animation: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+
+    & .burger-line,
+    &::before,
+    &::after {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: var(--burger-line-height);
+      border-radius: 100px;
+      background-color: currentColor;
+      transition: var(--animation);
+    }
+    &:hover {
+      background-color: var(--light-color);
+    }
+
+    & .burger-line {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &::before {
+      content: "";
+      top: 0;
+    }
+
+    &::after {
+      content: "";
+      top: calc(100% - var(--burger-line-height));
+    }
+  }
+  & .burger--active {
+    & .burger-line {
+      transform: scale(0);
+    }
+    &::before {
+      top: 50%;
+      transform: rotate(45deg);
+    }
+    &::after {
+      top: 50%;
+      transform: rotate(-45deg);
+    }
+  }
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.25);
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+}
+@media (max-width: 758px) {
+  .overlay--active {
+    opacity: 1;
+    visibility: visible;
+  }
+}

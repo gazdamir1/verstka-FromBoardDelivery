@@ -1,0 +1,60 @@
+@font-face {
+  font-family: "Formular-Light";
+  src: url(./Formular-Light.woff2) format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Formular-Regular";
+  src: url(./Formular.woff2) format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Formular-Medium";
+  src: url(./Formular-Medium.woff2) format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Formular-Bold";
+  src: url(./Formular-Bold.woff2) format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Formular-Black";
+  src: url(./Formular-Black.woff2) format("woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* Font-sizing */
+  --fs-text-xs: 0.75rem;
+  --fs-text-sm: 0.875rem;
+  --fs-text-base: 1rem;
+  --fs-text-lg: 1.125rem;
+  --fs-text-xl: 1.25rem;
+  --fs-text-2xl: 1.5rem;
+  --fs-text-3xl: 1.875rem;
+  --fs-text-4xl: 2.25rem;
+
+  --lh-text-xs: 1rem;
+  --lh-text-sm: 1.25rem;
+  --lh-text-base: 1.5rem;
+  --lh-text-lg: 1.75rem;
+  --lh-text-xl: 1.75rem;
+  --lh-text-2xl: 2rem;
+  --lh-text-3xl: 2.25rem;
+  --lh-text-4xl: 2.5rem;
+}
