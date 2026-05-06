@@ -35,7 +35,7 @@ function renderReviews() {
         `<li class="slide">
       <div class="review">
         <p class="review-text ">${item.text}</p>
-        <img class="review-img" src="/src/assets/quotes.svg" alt="Кавычки">
+        <img class="review-img" src="/quotes.svg" alt="Кавычки">
         <p class="review-author">${item.author}</p>
       </div>
     </li>`,

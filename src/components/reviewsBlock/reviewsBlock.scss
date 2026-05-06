@@ -142,14 +142,14 @@
 
   &::scroll-button(left) {
     content: "";
-    background-image: url("/src/assets/arrowLeft.svg");
+    background-image: url("/arrowLeft.svg");
     left: calc(anchor(left) - 107px);
     bottom: calc(anchor(top) - 200px);
   }
 
   &::scroll-button(right) {
     content: "";
-    background-image: url("/src/assets/arrowRight.svg");
+    background-image: url("/arrowRight.svg");
     right: calc(anchor(right) - 107px);
     bottom: calc(anchor(top) - 200px);
   }
